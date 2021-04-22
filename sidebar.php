@@ -1,11 +1,11 @@
   <aside>
     <div class="aside__banner">
-      <img src="img/banner.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>img/banner.png" alt="">
     </div>
     <div class="aside__banner">
       <div class="banner__head">
         <div>
-          <img src="img/estramedia__logo.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>img/estramedia__logo.png" alt="">
         </div>
       </div>
       <div class="banner__text">

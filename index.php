@@ -9,37 +9,43 @@
         <div class="container__wrap">
           <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-　　　　　　  <!-- メインループ開始 -->
+              　　　　　　
+              <!-- メインループ開始 -->
               <a href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(); ?>
+                  <?php the_post_thumbnail(); ?>
                 <?php else : ?>
                   <div class="article__item">
                     <div class="item__head">
                       <img src="<?php echo get_template_directory_uri(); ?>img/blog__first.jpg" alt="">
-                      <?php endif; ?>
-                      <?php if (!is_category() && has_category()) : ?>
-                        <p class="item__head-tag">
-                          <?php $postcat = get_the_category();
-                          echo $postcat[0]->name;
-                          ?>
-                        </p>
+                    <?php endif; ?>
+                    <?php if (!is_category() && has_category()) : ?>
+                      <p class="item__head-tag">
+                        <?php $postcat = get_the_category();
+                        echo $postcat[0]->name;
+                        ?>
+                      </p>
                     </div>
+                  <?php endif; ?>
                   <div class="item__text">
                     <p>
                       <?php
-                        if (mb_strlen($post->post_title, 'UTF-8') > 30) {
-                          $title = mb_substr($post->post_title, 0, 30, 'UTF-8');
-                          echo $title . '…';
-                        } else {
-                          echo $post->post_title;
-                        }
-                        ?>
+                      if (mb_strlen($post->post_title, 'UTF-8') > 30) {
+                        $title = mb_substr($post->post_title, 0, 30, 'UTF-8');
+                        echo $title . '…';
+                      } else {
+                        echo $post->post_title;
+                      }
+                      ?>
                     </p>
                     <span><?php echo get_the_date('Y-m-d'); ?></span>
                   </div>
-                </div>
+                  </div>
               </a>
+            <?php endwhile; ?>
+          <?php else : ?>
+            <p>投稿が見つかりません。</p>
+          <?php endif; ?>
           <!-- <a href="">
             <div class="article__item">
               <div class="item__head">
