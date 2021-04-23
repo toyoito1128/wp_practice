@@ -10,27 +10,25 @@ License: テーマのライセンス
 License URI: テーマのライセンスのURL
 */
 
-
 /* common */
-a{
+a {
   text-decoration: none;
   color: rgb(68, 68, 68);
 }
 
-li{
+li {
   list-style: none;
 }
 
-body{
+body {
   color: rgb(68, 68, 68);
 }
 
 /* header */
-.logo{
+.logo {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-
 }
 
 /* header a img{
@@ -39,7 +37,7 @@ body{
   display: inline-block;
 } */
 
-.menu__pc{
+.menu__pc {
   display: none;
 }
 
@@ -53,12 +51,13 @@ body{
 
   .menu__pc li {
     padding: 20px;
+    font-size: 20px;
   }
 }
 
 /* firstview */
 
-.firstview{
+.firstview {
   background-image: url(img/media__firstview-sp.png);
   background-size: cover;
   background-position: center center;
@@ -67,11 +66,20 @@ body{
   position: relative;
 }
 
-.firstview h1{
+.firstview-category{
+  background-color: rgb(180, 10, 80);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 400px;
+  position: relative;
+}
+
+.firstview h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
   text-align: center;
@@ -80,13 +88,38 @@ body{
   width: 100%;
 }
 
-@media screen and (min-width:760px) {
-  .firstview{
-    background-image: url(img/media__firstview.png) ;
+.firstview-category h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-family: cursive;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .firstview {
+    background-image: url(img/media__firstview.png);
     background-size: cover;
     height: 400px;
   }
-  .firstview h1{
+
+  .firstview-category{
+    background-color: rgb(180, 10, 80);
+    background-size: cover;
+    height: 250px;
+  }
+
+  .firstview h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+    .firstview-category h1 {
     font-size: 50px;
     line-height: 60px;
   }
@@ -94,45 +127,44 @@ body{
 
 /* main */
 
-.main{
+.main {
   background-color: rgb(230, 230, 230);
   padding: 40px 30px;
 }
 
-
-.purple{
-  color:rgb(180, 10, 80);
+.purple {
+  color: rgb(180, 10, 80);
   font-family: cursive;
 }
 
-.main h2{
+.main h2 {
   font-size: 20px;
   padding: 20px 0;
 }
 
-.container__wrap a{
+/* .article {
   width: 100%;
-}
+} */
 
-.article__item{
+.article__item {
   border-radius: 10px;
   background-color: white;
   margin: 20px 0;
 }
 
-.item__head{
+.item__head {
   width: 100%;
   position: relative;
 }
 
-.item__head img{
+.item__head img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 }
 
-.item__head-tag{
+.item__head-tag {
   background-color: rgb(180, 10, 80);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -143,46 +175,91 @@ body{
   top: 0;
 }
 
-.item__text{
+.item__text {
   padding: 15px;
   box-sizing: border-box;
 }
 
-.item__text p{
-  font-size: 16px;
+.item__text p {
+  font-size: 20px;
   margin-bottom: 15px;
   line-height: 24px;
 }
-.item__text span{
-  font-size: 12px;
+.item__text span {
+  font-size: 14px;
 }
 
+/* single.php */
+/* ↓↓↓↓↓↓↓↓↓↓↓↓ */
+.contaienr__wrap__single{
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.article__item{
+  width: 100%;
+}
+
+.item__head-tag__single{
+  display: inline-block;
+  background-color: rgb(180, 10, 80);
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  /* font-size: 10px; */
+}
+
+.article__title__single{
+  font-size: 30px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+
+.item__head__single{
+  width: 100%;
+}
+
+.single__img{
+  width: 100%;
+  height: 400px;
+  border-radius: 10px ;
+}
+
+.main-text{
+  padding: 10px 15px;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑↑ */
+/*single.php */
+
+
 /* aside tag */
-.aside{
+.aside {
   width: 100%;
   /* display: flex;
   justify-content: space-evenly; */
 }
 
-.aside__banner{
+.aside__banner {
   width: 100%;
   margin: 20px 0;
   box-sizing: border-box;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px 0px;
 }
 
-.aside__banner img{
+.aside__banner a img {
   width: 100%;
   border-radius: 10px;
 }
 
-.aside__banner{
-  border-radius: 10px;
-  background-color: white;
-  padding: 20px 20px;
-}
-
 /* aside tag  個別*/
-.banner__head{
+.banner__head {
   background-color: rgb(180, 10, 80);
   border-radius: 50%;
   width: 150px;
@@ -191,91 +268,105 @@ body{
   position: relative;
 }
 
-.banner__head img{
+.banner__head img {
   width: 150px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.banner__text{
-  padding: 20px 0;
+.banner__text {
+  padding: 20px;
 }
 
-.aside__banner h3{
+.aside__banner h3 {
   font-size: 26px;
+  padding: 0px 20px;
 }
 
-.banner__text h3{
+.banner__text h3 {
   text-align: center;
 }
 
-.banner__text p{
+.banner__text p {
   line-height: 25px;
   padding-top: 15px;
 }
 
 /* banner3 */
 
-.aside__banner ul{
-  padding-top: 20px;
+.aside__banner ul {
+  padding: 20px 20px 0;
 }
 
-.aside__banner li{
+.aside__banner li {
   border-bottom: solid 1px rgb(230, 230, 230);
-  position: relative
+  position: relative;
 }
 
-.aside__banner li a{
+.aside__banner li a {
   display: block;
   line-height: 40px;
 }
 
-
-.aside__banner li a::after{
+.aside__banner li a::after {
   position: absolute;
   content: url(img/arrow.svg);
   right: 0px;
   top: 5px;
 }
 
-
-@media screen and (min-width:760px) {
-  .container{
+@media screen and (min-width: 760px) {
+  .container {
     display: flex;
     justify-content: space-between;
   }
-  .container__wrap{
+  .container__wrap {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     width: 70%;
   }
+  .container__wrap__single{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
 
-  aside{
+  .article{
+    width: 400px;
+    /* margin: 0 auto; */
+  }
+
+  aside {
     width: 30%;
   }
-  .container__wrap a{
+  .article {
     width: 28%;
-    margin: 0 10px;
+    padding: 0 10px;
   }
-  .item__text p{
+
+  .item__text p {
     margin-bottom: 20px;
   }
+
+  /* .item__head-tag__single{
+    font-size: 10px;
+    line-height: 15px;
+  } */
+
+  .article__title{
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  /* .article__title__single{
+    font-size: 30px;
+  } */
 }
 
-footer{
-  padding:20px;
+footer {
+  padding: 20px;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-

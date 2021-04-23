@@ -1,11 +1,13 @@
   <aside>
     <div class="aside__banner">
-      <img src="<?php echo get_template_directory_uri(); ?>img/banner.png" alt="">
+      <a href="https://coachtech.site/">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/banner.png" alt="">
+      </a>
     </div>
     <div class="aside__banner">
       <div class="banner__head">
         <div>
-          <img src="<?php echo get_template_directory_uri(); ?>img/estramedia__logo.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/estramedia__logo.png" alt="">
         </div>
       </div>
       <div class="banner__text">
@@ -16,11 +18,11 @@
     <div class="aside__banner">
       <h3>Category</h3>
       <ul>
-        <li><a href="">HTML</a></li>
-        <li><a href="">CSS</a></li>
-        <li><a href="">JavaScript</a></li>
-        <li><a href="">PHP</a></li>
-        <li><a href="">MySQL</a></li>
+        <li><a href="<?php echo get_category_link(12); ?>">HTML</a></li>
+        <li><a href="<?php echo get_category_link(11); ?>">CSS</a></li>
+        <li><a href="<?php echo get_category_link(10); ?>">JavaScript</a></li>
+        <li><a href="<?php echo get_category_link(9); ?>">PHP</a></li>
+        <li><a href="<?php echo get_category_link(7); ?>">MySQL</a></li>
       </ul>
     </div>
   </aside>
