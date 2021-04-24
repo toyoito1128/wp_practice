@@ -2,7 +2,7 @@
   <div class="firstview">
     <h1>Commit to the growth <br>for everyone</h1>
   </div>
-  <main>
+  <!-- <main> -->
     <div class="main">
       <p class="purple">New Post</p>
       <h2>新着記事</h2>
@@ -17,7 +17,7 @@
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail(); ?>
                     <?php else : ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>img/blog__first.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/blog__first.jpg" alt="">
                     <?php endif; ?>
                     <!-- カテゴリ -->
                     <?php if (!is_category() && has_category()) : ?>
@@ -52,5 +52,5 @@
         <?php get_sidebar(); ?>
       </div>
     </div>
-  </main>
+  <!-- </main> -->
   <?php get_footer(); ?>
