@@ -25,6 +25,11 @@ body {
 }
 
 /* header */
+
+header{
+  background-color: white;
+}
+
 .logo {
   width: 70%;
   margin: 0 auto;
@@ -386,4 +391,5 @@ body {
 footer {
   padding: 20px;
   text-align: center;
+  background-color: white;
 }
